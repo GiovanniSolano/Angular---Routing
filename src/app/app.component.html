@@ -1,0 +1,25 @@
+<h1>Angular - Routing</h1>
+
+<p>El concepto de routing con aplicaciones de tipo SPA es muy diferente a la creación habitual de enlaces para navegar entre páginas
+</p>
+<br>
+<p>Activamos o desactivamos componentes en función de la ruta que tengamos en nuestro navegador</p>
+<br>
+<p>Si mantenemos una navgeación normal a través de enlaces perdemos la posibilidad de trabajar con urls específicas o el historico del navegador
+</p>
+
+<div class="rutas">
+    <a [routerLink]="['/informacion']" routerLinkActive="activa">Información</a>
+    <!-- <a routerLink="'/informacion'">Información</a> -->
+    <a [routerLink]="['/about']" routerLinkActive="activa">About</a>
+    <a [routerLink]="['/contacto']" routerLinkActive="activa">Contacto</a>
+</div>
+
+<br>
+<div class="botones">
+    <button (click)="onClick('informacion')">Información</button>
+    <button (click)="onClick('about')">About</button>
+    <button (click)="onClick('contacto')">Contacto</button>
+    <button (click)="onClick('empleado')">Empleado</button>
+</div>
+<router-outlet></router-outlet>
